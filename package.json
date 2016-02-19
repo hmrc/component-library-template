@@ -19,5 +19,7 @@
   },
   "bugs": {
     "url": "https://github.com/hmrc/component-library-template/issues"
+  },
+  "main": "template_config.js"
   }
 }

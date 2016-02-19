@@ -10,6 +10,8 @@
       (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
     </script>
 
+    <link rel="stylesheet" href="public/vendor/kss.css">
+
     <!--[if gt IE 8]><!--><link href="public/assets/stylesheets/govuk-template.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
     <!--[if IE 6]><link href="public/assets/stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="public/assets/stylesheets/govuk-template-ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
@@ -52,13 +54,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="public/assets/images/opengraph-image.png">
 
-
+    {{{styles}}}
   </head>
 
-  <body>
+  <body id="kss-node">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-
-
 
     <div id="skiplink-container">
       <div>
@@ -67,12 +67,9 @@
     </div>
 
     <div id="global-cookie-message">
-
         <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
-
     </div>
     <!--end global-cookie-message-->
-
 
     <header role="banner" id="global-header" class="">
       <div class="header-wrapper">
@@ -82,15 +79,10 @@
               <img src="public/assets/images/gov.uk_logotype_crown_invert_trans.png" width="35" height="31" alt=""> GOV.UK
             </a>
           </div>
-
         </div>
-
       </div>
     </header>
     <!--end header-->
-
-
-
 
     <div id="global-header-bar"></div>
     <!--end global-header-bar-->
@@ -98,57 +90,148 @@
     <!-- Page content goes here -->
     <div class="kss-sidebar kss-style">
       <header class="kss-header">
-        <h1 class="kss-doc-title">HMRC Component Library</h1>
+        <h1 class="kss-doc-title">{{options.title}}</h1>
       </header>
       <nav class="kss-nav">
         <ul class="kss-nav__menu">
           <li class="kss-nav__menu-item">
-            <a class="kss-nav__menu-link" href="./">
+            <a href="./">
               <span class="kss-nav__ref">0</span
               ><span class="kss-nav__name">Overview</span>
             </a>
           </li>
-        {{#each menu}}
+        {{#eachRoot}}
           <li class="kss-nav__menu-item">
-            <a class="kss-nav__menu-link" href="section-{{referenceURI}}.html">
-              <span class="kss-nav__ref">{{referenceNumber}}</span><span class="kss-nav__name">{{header}}</span>
+            <a href="section-{{referenceURI}}.html">
+              <span class="kss-nav__ref">{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span
+              ><span class="kss-nav__name">{{header}}</span>
             </a>
-            {{#if isActive}}
-            {{#if children}}
+          {{#ifReference ../rootName}}
             <ul class="kss-nav__menu-child">
-            {{#each children}}
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
-                  <span class="kss-nav__ref {{#if isGrandChild}}kss-nav__ref-child{{/if}}">{{referenceNumber}}</span
-                  ><span class="kss-nav__name">{{header}}</span>
-                </a>
-              </li>
-            {{/each}}
+            {{#eachSection reference}}
+              {{#ifDepth 2 ../../../options.[nav-depth]}}
+                <li class="kss-nav__menu-item">
+                  <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">
+                    <span class="kss-nav__ref {{#ifDepth 3 100}}kss-nav__ref-child{{/ifDepth}}">{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span
+                    ><span class="kss-nav__name">{{header}}</span>
+                  </a>
+                </li>
+              {{/ifDepth}}
+            {{/eachSection}}
             </ul>
-            {{/if}}
-            {{/if}}
+          {{/ifReference}}
           </li>
-        {{/each}}
+        {{/eachRoot}}
         </ul>
       </nav>
     </div>
 
-    <!-- article goes here -->
+    <article role="main" class="kss-main">
+      {{#if homepage}}
+        <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+          {{{homepage}}}
+        </div>
+      {{else}}
+
+        {{!
+          Display each section, in order.
+
+          The "root" element comes first in this loop, and can be detected using
+          the "#ifDepth 1" block as seen below.
+        }}
+        {{#eachSection rootName}}
+          {{#ifDepth 1}}
+            <div     id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
+          {{else}}
+            <section id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
+          {{/ifDepth}}
+
+          <div class="kss-style">
+            <h{{depth}} class="kss-title kss-title--level-{{depth}}">
+              <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
+                <span class="kss-title__ref">
+                  {{#ifNumeric reference}}
+                    {{reference}}
+                  {{else}}
+                    {{autoincrement}}
+                  {{/ifNumeric}}
+                  <span class="kss-title__permalink-hash">
+                    {{#ifNumeric reference}}
+                      #permalink
+                    {{else}}
+                      #{{reference}}
+                    {{/ifNumeric}}
+                  </span>
+                </span>
+                {{header}}
+              </a>
+            </h{{depth}}>
+
+          {{#if parameters}}
+            <ul class="kss-parameters">
+            {{#eachParameter}}
+              <li class="kss-parameters__item">
+                <code class="kss-parameters__name">{{name}}</code>
+                <div class="kss-parameters__description">{{{description}}}</div>
+              </li>
+            {{/eachParameter}}
+            </ul>
+          {{/if}}
+
+          {{#if description}}
+            <div class="kss-description">
+              {{{description}}}
+            </div>
+          {{/if}}
+          </div>
+
+          {{#if markup}}
+            <div class="kss-modifier__wrapper">
+              <div class="kss-modifier__heading kss-style">
+                Example{{#if modifiers}}s{{/if}}
+              </div>
+            {{#if modifiers}}
+              <div class="kss-modifier__default-name kss-style">
+                Default styling
+              </div>
+            {{/if}}
+              <div class="kss-modifier__example">
+                {{{markup}}}
+              </div>
+            {{#eachModifier}}
+              <div class="kss-modifier__name kss-style">
+                {{name}}
+              </div>
+              <div class="kss-modifier__description kss-style">
+                {{{description}}}
+              </div>
+              <div class="kss-modifier__example">
+                {{{markup}}}
+              </div>
+            {{/eachModifier}}
+            </div>
+
+            <div class="kss-markup kss-style">
+              <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+            </div>
+          {{/if}}
+
+          {{#ifDepth 1}}
+            </div>
+          {{else}}
+            </section>
+          {{/ifDepth}}
+        {{/eachSection}}
+      {{/if}}
+    </article>
 
     <footer class="group js-footer" id="footer" role="contentinfo">
-
       <div class="footer-wrapper">
-
-
         <div class="footer-meta">
           <div class="footer-meta-inner">
-
-
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-
                 <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
-
             </div>
           </div>
 
@@ -158,13 +241,17 @@
         </div>
       </div>
     </footer>
-
     <!--end footer-->
 
     <div id="global-app-error" class="app-error hidden"></div>
 
     <script src="public/assets/javascripts/govuk-template.js" type="text/javascript"></script>
 
-
+    <!-- SCRIPTS -->
+    <script src="public/vendor/kss.js"></script>
+    <script src="public/vendor/prettify.js"></script>
+    <script>
+      prettyPrint();
+    </script>
   </body>
 </html>
