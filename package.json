@@ -1,0 +1,23 @@
+{
+  "name": "hmrc-component-library-template",
+  "version": "1.0.0",
+  "description": "Template files for HMRC's component library",
+  "author": "HM Revenue & Customs",
+  "homepage": "https://github.com/hmrc/component-library-template",
+  "license": "Apache-2.0",
+  "contributors": [
+    "Rory Powis <rory.powis@digital.hmrc.gov.uk>"
+  ],
+  "keywords": [
+    "HMRC",
+    "template",
+    "component-library"
+  ],
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/hmrc/component-library-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hmrc/component-library-template/issues"
+  }
+}
