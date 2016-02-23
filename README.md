@@ -17,6 +17,7 @@ $ git clone https://github.com/hmrc/component-library-template
 $ cd /path/to/component-library-template
 $ npm link
 $ cd /path/to/assets-frontend
+$ rm -rf node_modules/hmrc-component-library-template
 $ npm link hmrc-component-library-template
 ```
 
