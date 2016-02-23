@@ -13,17 +13,7 @@ var kssHandlebarsTemplate;
 module.exports = kssHandlebarsTemplate = {};
 
 // Tell kss-node which generator this template uses.
-try {
-  // In order for a template to be "kss-node clone"-able, it must use the
-  // require('kss/generator/path') syntax.
-  kssHandlebarsTemplate.generator = require('kss/generator/handlebars');
-} catch (e) {
-  // The above require() line will always fail while testing a git clone of this
-  // module because this code is not inside a "node_modules/kss" folder which
-  // would allow node.js to find it with require('kss/anything'). So we catch
-  // the error and use a relative path.
-  kssHandlebarsTemplate.generator = require('../kss_handlebars_generator.js');
-}
+kssHandlebarsTemplate.generator = require('kss/generator/handlebars');
 
 // Tell kss-node which Yargs-like options this template has.
 // See https://github.com/bcoe/yargs/blob/master/README.md#optionskey-opt
