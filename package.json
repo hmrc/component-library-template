@@ -13,9 +13,9 @@
     "template",
     "component-library"
   ],
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/hmrc/component-library-template.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hmrc/component-library-template.git"
   },
   "bugs": {
     "url": "https://github.com/hmrc/component-library-template/issues"
