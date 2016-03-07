@@ -140,7 +140,10 @@
                 {{/if}}
 
                 {{#if description}}
-                  <div class="comp-lib-pattern-intro comp-lib-pattern-markdown">
+                  <div class="comp-lib-description
+                              comp-lib-pattern-markdown
+                              {{#if experimental}} comp-lib-description--experimental{{/if}}
+                              {{#if deprecated}} comp-lib-description--deprecated{{/if}}">
                     {{{description}}}
                   </div>
                 {{/if}}
