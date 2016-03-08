@@ -99,10 +99,8 @@
                   <ul>
                   {{#eachSection reference}}
                     {{#ifDepth 2 ../../../options.[nav-depth]}}
-                      <li>
-                        <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">
-                          <span>{{header}}</span>
-                        </a>
+                      <li class="comp-lib-menu-item--indented">
+                        <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
                       </li>
                     {{/ifDepth}}
                   {{/eachSection}}
