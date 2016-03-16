@@ -151,10 +151,12 @@
                 {{#if markup}}
                   <div>
                     <div class="comp-lib-pattern-example">
-                      <div class="comp-lib-pattern-component">
+                      <div class="comp-lib-pattern-component comp-lib-clearfix">
                         {{{markup}}}
                       </div>
-                      <div><pre class="comp-lib-pre"><code class="comp-lib-code html">{{markup}}</code></pre></div>
+                      <div class="comp-lib-code-example">
+                        <pre class="comp-lib-pre"><code class="comp-lib-code html">{{markup}}</code></pre>
+                      </div>
                     </div>
 
                   {{#eachModifier}}
@@ -162,10 +164,10 @@
                       <div class="comp-lib-pattern-example__description">
                         {{{description}}}
                       </div>
-                      <div class="comp-lib-pattern-component">
+                      <div class="comp-lib-pattern-component comp-lib-clearfix">
                         {{{markup}}}
                       </div>
-                      <div>
+                      <div class="comp-lib-code-example">
                         <pre class="comp-lib-pre"><code class="comp-lib-code html">{{markup}}</code></pre>
                       </div>
                     </div>
