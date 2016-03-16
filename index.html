@@ -205,6 +205,10 @@
     </footer>
     <!--end footer-->
 
+    {{#isSection "AutoComplete"}}
+      {{> countryCodes }}
+    {{/isSection}}
+
     <script src="public/assets/javascripts/vendor/highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
