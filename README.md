@@ -4,17 +4,17 @@ Template files for HMRC's component library
 
 - [Installing](#installing)
 - [Developing Locally](#requirements)
+- [Custom Handlebars Helpers](#custom-handlebars-helpers)
+- [Partials](#partials)
 - [Contributing](#contributing)
 - [License](#license)
 
-<a name="installing">
 ## Installing
 
 ```
 $ npm install --save-dev hmrc/component-library-template
 ```
 
-<a name="developing-locally">
 ## Developing Locally
 
 To see your changes to `hmrc-component-library-template` locally you'll need to link the package with npm:
@@ -50,7 +50,13 @@ $ npm run comp-lib:watch -- -w ./path/to/hmrc/component-library-template
 $ npm run comp-lib:watch -- -w ./../component-library-template
 ```
 
-<a name="contributing">
+## Custom Handlebars Helpers
+You can add handlebars helpers by adding the relevant handlebars helper in [helpers](./helpers) and following an example found within this folder. 
+Theses helpers will be usable in the component library.
+
+## Partials
+You can add `partials` by adding the relevant handlebars helper in [helpers](./helpers) which refers to the markup in [partials](./partials)  
+
 ## Contributing
 
 1. Clone this repo
@@ -59,7 +65,6 @@ $ npm run comp-lib:watch -- -w ./../component-library-template
 4. Test your changes by [running your local version](#developing-locally)
 5. Push your branch and open a Pull Request
 
-<a name="license">
 ## License
 
 This code is open source software licensed under the Apache 2.0 License.
