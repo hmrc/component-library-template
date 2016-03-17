@@ -52,10 +52,14 @@ $ npm run comp-lib:watch -- -w ./../component-library-template
 
 ## Custom Handlebars Helpers
 You can add handlebars helpers by adding the relevant handlebars helper in [helpers](./helpers) and following an example found within this folder. 
-Theses helpers will be usable in the component library.
+Theses helpers will be available within your handlebars markup.
 
 ## Partials
-You can add `partials` by adding the relevant handlebars helper in [helpers](./helpers) which refers to the markup in [partials](./partials)  
+You can add `partials` by adding your `partial` within the [partials](./partials) directory. The partial will be automatically registered
+and it will be available in your handlebars markup via your `partials` filename.
+
+*e.g*
+With the partials name `countryCodes.html` you can use it in your handlebars markup via `{{> countryCodes}}`
 
 ## Contributing
 
