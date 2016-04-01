@@ -147,7 +147,11 @@
                               comp-lib-pattern-markdown
                               {{#if experimental}} comp-lib-description--experimental{{/if}}
                               {{#if deprecated}} comp-lib-description--deprecated{{/if}}">
-                    {{{description}}}
+                    <h2 class="comp-lib-warning">
+                      {{#if experimental}}Experimental!{{/if}}
+                      {{#if deprecated}}Deprecated!{{/if}}
+                    </h2>
+                    {{#removePrefix}}{{{description}}}{{/removePrefix}}
                   </div>
                 {{/if}}
                 </div>
