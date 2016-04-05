@@ -61,7 +61,6 @@
   </head>
 
   <body class="no-js">
-
     <header role="banner" id="global-header">
       <div class="header-wrapper">
         <div class="header-global">
@@ -190,6 +189,12 @@
                 {{else}}
                   </section>
                 {{/ifDepth}}
+
+              {{#if componentdata}}
+                <!-- Data associated with a component -->
+                {{{componentdata}}}
+              {{/if}}
+
               {{/eachSection}}
             {{/if}}
           </article>
