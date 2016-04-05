@@ -12,15 +12,19 @@ var fs = require('fs');
 module.exports.register = function(handlebars, config) {
   config = config || {};
 
-  var partialFiles = fs.readdirSync(PARTIALS_FOLDER, 'utf8');
   var partials = {};
+  fs.readdir(PARTIALS_FOLDER, function (err, files) {
 
-  partialFiles.map(function (fileName) {
-    var partialName = fileName.split('.')[0];
-    var html = fs.readFileSync(PARTIALS_FOLDER + fileName, 'utf8');
+    if (err) {
+      return err;
+    }
 
-    partials[partialName] = html;
+    files.map(function (fileName) {
+      var partialName = fileName.split('.')[0];
+      var html = fs.readFileSync(PARTIALS_FOLDER + fileName, 'utf8');
+      partials[partialName] = html;
+    });
+
+    handlebars.registerPartial(partials);
   });
-
-  handlebars.registerPartial(partials);
 };
