@@ -190,9 +190,11 @@
                   </section>
                 {{/ifDepth}}
 
-              {{#if componentdata}}
-                <!-- Data associated with a component -->
-                {{{componentdata}}}
+              {{#if exampledata}}
+                <!-- data associated with a component -->
+                <script type="text/javascript">
+                  {{{exampledata}}}
+                </script>
               {{/if}}
 
               {{/eachSection}}
