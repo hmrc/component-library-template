@@ -59,7 +59,7 @@ You can add `partials` by adding your `partial` within the [partials](./partials
 and it will be available in your handlebars markup via your `partials` filename.
 
 *e.g*
-With the partials name `countryCodes.html` you can use it in your handlebars markup via `{{> countryCodes}}`
+With the partial name `example.html` you can use it in your handlebars markup via `{{> example}}`
 
 ## Contributing
 
