@@ -43,8 +43,7 @@
 .comp-lib-menu-link:active {
   color: #000;
 }
-.comp-lib-description,
-.comp-lib-description p {
+.comp-lib-description {
   line-height: 1.5;
   padding-bottom: 1em;
 }
@@ -108,7 +107,8 @@
   margin-bottom: 2em;
 }
 .comp-lib-pattern-markdown p {
-  margin-bottom: 1.6em;
+  line-height: 1.5;
+  margin-bottom: 1em;
 }
 .comp-lib-pattern-markdown h1 {
   padding-top: 1.6em;
