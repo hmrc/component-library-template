@@ -159,7 +159,7 @@
                   {{#if markup}}
                     <div>
                       <div class="comp-lib-pattern-example">
-                        <div class="comp-lib-pattern-component comp-lib-clearfix">
+                        <div class="comp-lib-pattern-component comp-lib-clearfix{{#ifCond background 'dark'}} comp-lib-pattern-component--dark{{/ifCond}}">
                           {{{markup}}}
                         </div>
                         <div class="comp-lib-code-example">
@@ -173,7 +173,7 @@
                         <div class="comp-lib-description">
                           {{{description}}}
                         </div>
-                        <div class="comp-lib-pattern-component comp-lib-clearfix">
+                        <div class="comp-lib-pattern-component comp-lib-clearfix{{#ifCond background 'dark'}} comp-lib-pattern-component--dark{{/ifCond}}">
                           {{{markup}}}
                         </div>
                         <div class="comp-lib-code-example">
