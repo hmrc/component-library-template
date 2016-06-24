@@ -9,11 +9,13 @@ Template files for HMRC's component library
 - [Contributing](#contributing)
 - [License](#license)
 
+
 ## Installing
 
 ```
 $ npm install --save-dev hmrc/component-library-template
 ```
+
 
 ## Developing Locally
 
@@ -28,7 +30,9 @@ $ rm -rf node_modules/hmrc-component-library-template
 $ npm link hmrc-component-library-template
 ```
 
+
 ### Manually update
+
 Then every time you make an update to the template, just re-link and start the build again:
 
 ```
@@ -36,7 +40,9 @@ Then every time you make an update to the template, just re-link and start the b
 $ npm link hmrc-component-library-template
 ```
 
+
 ### Update with a watch
+
 Inside of assets-frontend there is a task to add a watch using [nodemon](https://github.com/remy/nodemon). 
 This will `npm link hmrc-component-library-template` and build the Component Library. 
 You need to pass in the location of the folder where your local checkout of the [hmrc-component-library-template](https://github.com/hmrc/component-library-template/)
@@ -50,16 +56,40 @@ $ npm run comp-lib:watch -- -w ./path/to/hmrc/component-library-template
 $ npm run comp-lib:watch -- -w ./../component-library-template
 ```
 
-## Custom Handlebars Helpers
-You can add handlebars helpers by adding the relevant handlebars helper in [helpers](./helpers) and following an example found within this folder. 
-Theses helpers will be available within your handlebars markup.
+
+## Custom Handlebars Block Helpers
+
+[Block helpers](http://handlebarsjs.com/block_helpers.html) make it possible to define custom functionality that is applied to what you wrap them with.
+
+e.g.
+
+```javascript
+// helpers/customHelperFile.js
+Handlebars.registerHelper('bold', function(options) {
+  return new Handlebars.SafeString(
+      '<div class="mybold">'
+      + options.fn(this)
+      + '</div>');
+});
+
+// index.html
+{{#bold}}
+	Some content that will be bold.
+{{/bold}}
+```
+
+You can add custom helpers by adding a file to the [helpers](./helpers) directory. Read the [handlebars documentation](http://handlebarsjs.com/block_helpers.html) or follow an example found within this folder. 
+Theses helpers are available to use in your templates.
+
 
 ## Partials
+
 You can add `partials` by adding your `partial` within the [partials](./partials) directory. The partial will be automatically registered
 and it will be available in your handlebars markup via your `partials` filename.
 
 *e.g*
 With the partial name `example.html` you can use it in your handlebars markup via `{{> example}}`
+
 
 ## Contributing
 
@@ -68,6 +98,7 @@ With the partial name `example.html` you can use it in your handlebars markup vi
 3. Make some changes
 4. Test your changes by [running your local version](#developing-locally)
 5. Push your branch and open a Pull Request
+
 
 ## License
 
