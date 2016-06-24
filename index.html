@@ -123,13 +123,28 @@
                 </div>
               {{else}}
                 {{#eachSection rootName}}
+                  {{#if discussion}}
+                    {{setSectionData "discussion" discussion}}
+                  {{/if}}
+                {{/eachSection}}
+
+                {{#eachSection rootName}}
                   {{#ifDepth 1}}
                     <div id="kssref-{{referenceURI}}">
                   {{else}}
                     <section id="kssref-{{referenceURI}}">
                   {{/ifDepth}}
                   <div>
-                    <h{{depth}}><a href="#kssref-{{referenceURI}}" class="comp-lib-menu-link">{{header}}</a></h{{depth}}>
+                    <h{{depth}}>
+                      <a href="#kssref-{{referenceURI}}" class="comp-lib-menu-link">{{header}}</a>
+                    </h{{depth}}>
+                    {{#ifCond depth 1}}
+                      {{#if discussion}}
+                        <div class="alert alert--info alert--info__light" role="alert">
+                          <p class="alert__message">Discuss this component on <a href="{{discussion}}">Hackpad</a></p>
+                        </div>
+                      {{/if}}
+                    {{/ifCond}}
                   {{#if parameters}}
                     <ul>
                     {{#eachParameter}}
