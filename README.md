@@ -82,15 +82,6 @@ You can add custom helpers by adding a file to the [helpers](./helpers) director
 Theses helpers are available to use in your templates.
 
 
-## Partials
-
-You can add `partials` by adding your `partial` within the [partials](./partials) directory. The partial will be automatically registered
-and it will be available in your handlebars markup via your `partials` filename.
-
-*e.g*
-With the partial name `example.html` you can use it in your handlebars markup via `{{> example}}`
-
-
 ## Contributing
 
 1. Clone this repo
