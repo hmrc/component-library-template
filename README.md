@@ -4,7 +4,8 @@ Template files for HMRC's component library
 
 - [Installing](#installing)
 - [Developing Locally](#requirements)
-- [Custom Handlebars Helpers](#custom-handlebars-helpers)
+- [Adding Custom comment tags](#adding-custom-comment-tags)
+- [Adding Custom Handlebars Block Helpers](#adding-custom-handlebars-block-helpers)
 - [Partials](#partials)
 - [Contributing](#contributing)
 - [License](#license)
@@ -56,7 +57,32 @@ $ npm run comp-lib:watch -- -w ./path/to/hmrc/component-library-template
 $ npm run comp-lib:watch -- -w ./../component-library-template
 ```
 
+## Adding Custom Comment Tags
 
+If you wish to pass custom data from your `.sass` comments to the 
+[component-library-template](https://github.com/hmrc/component-library-template) you can do so by adding a custom tag.
+To add a custom tag add the tag name to the `custom` array in your kss `config.json`
+
+e.g.
+
+```javascript
+  // config.json
+  "custom": [
+    "Example"
+  ]
+  
+  // stylesheet.scss
+  /*
+  Component title
+  
+  Example: some data
+  
+  Styleguide: Component
+  */
+  
+  // index.html
+  {{example}}
+```
 
 
 ## Adding Custom Handlebars Block Helpers
@@ -76,7 +102,7 @@ Handlebars.registerHelper('bold', function(options) {
 
 // index.html
 {{#bold}}
-	Some content that will be bold.
+  Some content that will be bold.
 {{/bold}}
 ```
 
