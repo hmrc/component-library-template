@@ -57,7 +57,9 @@ $ npm run comp-lib:watch -- -w ./../component-library-template
 ```
 
 
-## Custom Handlebars Block Helpers
+
+
+## Adding Custom Handlebars Block Helpers
 
 [Block helpers](http://handlebarsjs.com/block_helpers.html) make it possible to define custom functionality that is applied to what you wrap them with.
 
