@@ -91,11 +91,7 @@
 
     <div class="sub-nav">
       <ul class="sub-nav-list">
-
-        <!--<li><a href="/design-patterns/patterns/" class="is-active">About</a></li>-->
-        <!--<li><a href="/design-patterns/patterns/styles/colour/">Styles</a></li>-->
         <li><a href="/design-patterns/patterns/components/alpha_and_beta_banners/">Components</a></li>
-        <!--<li><a href="/design-patterns/patterns/tasks/additional information/">Patterns</a></li>-->
       </ul>
     </div>
 
@@ -108,52 +104,61 @@
 
     <ul class="mobile-nav__list">
 
-    <li class="mobile-nav__leaf  comp-lib-menu-item{{#if homepage}} comp-lib-menu-item--highlighted{{/if}}">
-      <a href="./" class="comp-lib-menu-link">Home</a>
-    </li>
-    {{#eachRoot}}
-    <li class="comp-lib-menu-item{{#ifReference ../rootName}} comp-lib-menu-item--highlighted{{/ifReference}}">
-      <a href="section-{{referenceURI}}.html" class="comp-lib-menu-link">{{header}}</a>
+    <!--<li class="mobile-nav__leaf  comp-lib-menu-item{{#if homepage}} comp-lib-menu-item&#45;&#45;highlighted{{/if}}">-->
+      <!--<a href="./" class="comp-lib-menu-link">Home</a>-->
+    <!--</li>-->
+    <!--{{#eachRoot}}-->
+    <!--<li class="comp-lib-menu-item{{#ifReference ../rootName}} comp-lib-menu-item&#45;&#45;highlighted{{/ifReference}}">-->
+      <!--<a href="section-{{referenceURI}}.html" class="comp-lib-menu-link">{{header}}</a>-->
 
-      {{#ifReference ../rootName}}
-      <ul>
-        {{#eachSection reference}}
-        {{#ifDepth 2 ../../../options.[nav-depth]}}
-        <li class="comp-lib-menu-item--indented">
-          <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
-        </li>
-        {{/ifDepth}}
-        {{/eachSection}}
-      </ul>
-      {{/ifReference}}
-    </li>
-    {{/eachRoot}}
+      <!--{{#ifReference ../rootName}}-->
+      <!--<ul>-->
+        <!--{{#eachSection reference}}-->
+        <!--{{#ifDepth 2 ../../../options.[nav-depth]}}-->
+        <!--<li class="comp-lib-menu-item&#45;&#45;indented">-->
+          <!--<a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>-->
+        <!--</li>-->
+        <!--{{/ifDepth}}-->
+        <!--{{/eachSection}}-->
+      <!--</ul>-->
+      <!--{{/ifReference}}-->
+    <!--</li>-->
+    <!--{{/eachRoot}}-->
 
     </ul>
   </div>
 
-
-
   <div style="clear:left;" class="app-pane__body">
     <div class="app-pane__toc">
       <div class="toc" data-module="table-of-contents">
-        <nav id="toc" class="js-toc-list toc__list">
 
           <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
 
             <ul class="pattern-nav">
-              <li class="current-page"><a href="/design-patterns/patterns/">About the Design System</a></li>
-              <li><a href="/design-patterns/patterns/overview/design%20principles/principles.html">Design principles</a></li>
-              <li><a href="/design-patterns/patterns/overview/contribute/contribute.html">How to contribute</a></li>
-              <li><a href="/design-patterns/patterns/overview/statistics/">Site map</a></li>
-              <li><a href="/design-patterns/patterns/overview/support/support.html">Support</a></li>
-              <ul>
+              <li class="comp-lib-menu-item{{#if homepage}} comp-lib-menu-item--highlighted{{/if}}">
+                <a href="./" class="comp-lib-menu-link">Home</a>
+              </li>
+              {{#eachRoot}}
+              <li class="comp-lib-menu-item{{#ifReference ../rootName}} comp-lib-menu-item--highlighted{{/ifReference}}">
+                <a href="section-{{referenceURI}}.html" class="comp-lib-menu-link">{{header}}</a>
+                {{#ifReference ../rootName}}
+                <ul>
+                  {{#eachSection reference}}
+                  {{#ifDepth 2 ../../../options.[nav-depth]}}
+                  <li class="comp-lib-menu-item--indented">
+                    <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
+                  </li>
+                  {{/ifDepth}}
+                  {{/eachSection}}
+                </ul>
+                {{/ifReference}}
+              </li>
+              {{/eachRoot}}
+
+            </ul>
 
           </nav>
 
-
-
-        </nav>
       </div>
     </div>
 
@@ -161,25 +166,25 @@
       <main id="content" class="technical-documentation markdown" data-module="anchored-headings">
         <div class="grid-row">
 
-          <article class="comp-lib-main">
-            {{#if description}}
-            <div class="comp-lib-description">
-              {{{description}}}
-            </div>
-            {{/if}}
+          <!--<article class="comp-lib-main">-->
+            <!--{{#if description}}-->
+            <!--<div class="comp-lib-description">-->
+              <!--{{{description}}}-->
+            <!--</div>-->
+            <!--{{/if}}-->
 
-            <!-- pattern examples -->
-            {{#if markup}}
-            <div class="comp-lib-pattern-example">
-              <div class="comp-lib-pattern-component comp-lib-clearfix">
-                {{{markup}}}
-              </div>
-              <div class="comp-lib-code-example">
-                <pre class="comp-lib-pre"><code class="comp-lib-code html">{{markup}}</code></pre>
-              </div>
-            </div>
-            {{/if}}
-          </article>
+            <!--&lt;!&ndash; pattern examples &ndash;&gt;-->
+            <!--{{#if markup}}-->
+            <!--<div class="comp-lib-pattern-example">-->
+              <!--<div class="comp-lib-pattern-component comp-lib-clearfix">-->
+                <!--{{{markup}}}-->
+              <!--</div>-->
+              <!--<div class="comp-lib-code-example">-->
+                <!--<pre class="comp-lib-pre"><code class="comp-lib-code html">{{markup}}</code></pre>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--{{/if}}-->
+          <!--</article>-->
         </div>
 
       </main>
