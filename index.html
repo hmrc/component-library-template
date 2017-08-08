@@ -11,11 +11,18 @@
   <title>About the Design System</title>
 
   <link rel="stylesheet" href="public/assets/stylesheets/component-library.css">
+  <!--[if gt IE 8]><!--><link href="public/assets/stylesheets/govuk-template.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+  <!--[if IE 6]><link href="public/assets/stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if IE 7]><link href="public/assets/stylesheets/govuk-template-ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if IE 8]><link href="public/assets/stylesheets/govuk-template-ie8.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+  <link href="public/assets/stylesheets/govuk-template-print.css" media="print" rel="stylesheet" type="text/css" />
 
   <script src="public/assets/javascripts/application.js"></script>
+  {{{styles}}}
 </head>
 
-<body>
+<body class="no-js">
 <div class="app-pane">
   <div class="app-pane__header toc-open-disabled">
     <a href="#content" class="skip-link">Skip to main content</a>
@@ -134,81 +141,157 @@
 
         <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
 
-        <ul class="pattern-nav">
-        <li class="{{#if homepage}} current-page{{/if}}">
-        <a href="./">Home</a>
-        </li>
-        {{#eachRoot}}
-        <li class="{{#ifReference ../rootName}} current-page{{/ifReference}}">
-        <a href="section-{{referenceURI}}.html">{{header}}</a>
-        {{#ifReference ../rootName}}
-        <ul>
-        {{#eachSection reference}}
-        {{#ifDepth 2 ../../../options.[nav-depth]}}
-        <li>
-        <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
-        </li>
-        {{/ifDepth}}
-        {{/eachSection}}
-        </ul>
-        {{/ifReference}}
-        </li>
-        {{/eachRoot}}
+          <ul class="pattern-nav">
+            <li class="{{#if homepage}} current-page{{/if}}">
+              <a href="./">Home</a>
+            </li>
+            {{#eachRoot}}
+            <li class="{{#ifReference ../rootName}} current-page{{/ifReference}}">
+              <a href="section-{{referenceURI}}.html">{{header}}</a>
+              {{#ifReference ../rootName}}
+              <ul>
+                {{#eachSection reference}}
+                {{#ifDepth 2 ../../../options.[nav-depth]}}
+                <li>
+                  <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
+                </li>
+                {{/ifDepth}}
+                {{/eachSection}}
+              </ul>
+              {{/ifReference}}
+            </li>
+            {{/eachRoot}}
 
-        </ul>
+          </ul>
 
         </nav>
 
         <!--<nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">-->
-          <!--<ul class="pattern-nav">-->
-            <!--<li>-->
-              <!--<a href="./">Home</a>-->
-            <!--</li>-->
-            <!--<li class="current-page">-->
-              <!--<a href="">I am a link</a>-->
-              <!--<ul>-->
-                <!--<li class="current-page">-->
-                  <!--<a href="">Deeper link</a>-->
-                <!--</li>-->
-              <!--</ul>-->
-            <!--</li>-->
-          <!--</ul>-->
+        <!--<ul class="pattern-nav">-->
+        <!--<li>-->
+        <!--<a href="./">Home</a>-->
+        <!--</li>-->
+        <!--<li class="current-page">-->
+        <!--<a href="">I am a link</a>-->
+        <!--<ul>-->
+        <!--<li class="current-page">-->
+        <!--<a href="">Deeper link</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</li>-->
+        <!--</ul>-->
 
         <!--</nav>-->
 
       </div>
     </div>
-
     <div class="app-pane__content toc-open-disabled">
       <main id="content" class="technical-documentation markdown" data-module="anchored-headings">
         <div class="grid-row">
           <div class="column-full">
 
-              {{#if description}}
-
-              {{{description}}}
-
-              {{/if}}
-
-              <div class="example">
-
-                {{#if markup}}
-
-                {{{markup}}}
+            <article class="comp-lib-main">
+              {{#if homepage}}
+              <div class="comp-lib-pattern-markdown">
+                {{{homepage}}}
               </div>
+              {{else}}
+              {{#eachSection rootName}}
+              {{#if discussion}}
+              {{setSectionData "discussion" discussion}}
+              {{/if}}
+              {{/eachSection}}
 
-              <pre class="comp-lib-pre">
-                  <code class="comp-lib-code html">{{markup}}</code>
-                </pre>
+              {{#eachSection rootName}}
+              {{#ifDepth 1}}
+              <div id="kssref-{{referenceURI}}">
+                {{else}}
+                <section id="kssref-{{referenceURI}}">
+                  {{/ifDepth}}
+                  <div>
+                    <h{{depth}}>
+                    <a href="#kssref-{{referenceURI}}" class="comp-lib-menu-link">{{header}}</a>
+                    </h{{depth}}>
+                    {{#ifCond depth 1}}
+                    {{#if discussion}}
+                    <div class="alert alert--info" role="alert">
+                      <p class="alert__message">Discuss this component on <a href="{{discussion}}">Hackpad</a></p>
+                    </div>
+                    {{/if}}
+                    {{/ifCond}}
+                    {{#if parameters}}
+                    <ul>
+                      {{#eachParameter}}
+                      <li>
+                        <code>{{name}}</code>
+                        <div>{{{description}}}</div>
+                      </li>
+                      {{/eachParameter}}
+                    </ul>
+                    {{/if}}
 
+                    {{#if description}}
+                    <div class="comp-lib-description
+                                comp-lib-pattern-markdown
+                                {{#if experimental}} comp-lib-description--experimental{{/if}}
+                                {{#if deprecated}} comp-lib-description--deprecated{{/if}}">
+                      <h2 class="comp-lib-warning">
+                        {{#if experimental}}Experimental!{{/if}}
+                        {{#if deprecated}}Deprecated!{{/if}}
+                      </h2>
+                      {{#removePrefix}}{{{description}}}{{/removePrefix}}
+                    </div>
+                    {{/if}}
+                  </div>
+
+                  <!-- pattern examples -->
+                  {{#if markup}}
+                  <div>
+                    <div class="comp-lib-pattern-example">
+                      <div class="comp-lib-pattern-component comp-lib-clearfix{{#ifCond background 'dark'}} comp-lib-pattern-component--dark{{/ifCond}}">
+                        {{{markup}}}
+                      </div>
+                      <div class="comp-lib-code-example">
+                        <pre class="comp-lib-pre"><code class="comp-lib-code html">{{markup}}</code></pre>
+                      </div>
+                    </div>
+
+                    {{#eachModifier}}
+                    <div class="comp-lib-pattern-example">
+                      <h2>{{name}}</h2>
+                      <div class="comp-lib-description">
+                        {{{description}}}
+                      </div>
+                      <div class="comp-lib-pattern-component comp-lib-clearfix{{#ifCond background 'dark'}} comp-lib-pattern-component--dark{{/ifCond}}">
+                        {{{markup}}}
+                      </div>
+                      <div class="comp-lib-code-example">
+                        <pre class="comp-lib-pre"><code class="comp-lib-code html">{{markup}}</code></pre>
+                      </div>
+                    </div>
+                    {{/eachModifier}}
+                  </div>
+                  {{/if}}
+
+                  {{#ifDepth 1}}
+              </div>
+              {{else}}
+              </section>
+              {{/ifDepth}}
+
+              {{#if [example data]}}
+              <!-- data associated with a component -->
+              <script type="text/javascript">
+                {{{[example data]}}}
+              </script>
               {{/if}}
 
-            </div>
-
+              {{/eachSection}}
+              {{/if}}
+            </article>
+          </div>
         </div>
-
       </main>
-
       <footer class="footer footer--full-width">
         <div class="footer-container">
           <div class="footer__licence">
@@ -231,5 +314,15 @@
     </div>
   </div>
 </div>
+<!--end footer-->
+
+<script src="public/assets/javascripts/vendor/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript">
+  document.body.className = document.body.className.replace('no-js', 'js') + ' js-enabled';
+</script>
+<script src="public/assets/javascripts/vendor/kss/kss.js"></script>
+{{{scripts}}}
 </body>
 </html>

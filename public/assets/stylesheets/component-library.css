@@ -2120,10 +2120,8 @@ a:active {
   .header__brand {
     float: left; }
   .header__brand .govuk-logo {
-    background-position: 0 3px;
-    background-size: 37px;
-
-  }
+    float: none;
+    background-position: 0 2px; }
   .header__brand a:hover {
     text-decoration: none;
     border-bottom: 1px solid #fff; } }
