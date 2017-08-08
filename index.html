@@ -132,49 +132,49 @@
     <div class="app-pane__toc">
       <div class="toc" data-module="table-of-contents">
 
-        <!--<nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">-->
-
-        <!--<ul class="pattern-nav">-->
-        <!--<li class="{{#if homepage}} current-page{{/if}}">-->
-        <!--<a href="./">Home</a>-->
-        <!--</li>-->
-        <!--{{#eachRoot}}-->
-        <!--<li class="{{#ifReference ../rootName}} current-page{{/ifReference}}">-->
-        <!--<a href="section-{{referenceURI}}.html">{{header}}</a>-->
-        <!--{{#ifReference ../rootName}}-->
-        <!--<ul>-->
-        <!--{{#eachSection reference}}-->
-        <!--{{#ifDepth 2 ../../../options.[nav-depth]}}-->
-        <!--<li>-->
-        <!--<a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>-->
-        <!--</li>-->
-        <!--{{/ifDepth}}-->
-        <!--{{/eachSection}}-->
-        <!--</ul>-->
-        <!--{{/ifReference}}-->
-        <!--</li>-->
-        <!--{{/eachRoot}}-->
-
-        <!--</ul>-->
-
-        <!--</nav>-->
-
         <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
-          <ul class="pattern-nav">
-            <li>
-              <a href="./">Home</a>
-            </li>
-            <li class="current-page">
-              <a href="">I am a link</a>
-              <ul>
-                <li class="current-page">
-                  <a href="">Deeper link</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+
+        <ul class="pattern-nav">
+        <li class="{{#if homepage}} current-page{{/if}}">
+        <a href="./">Home</a>
+        </li>
+        {{#eachRoot}}
+        <li class="{{#ifReference ../rootName}} current-page{{/ifReference}}">
+        <a href="section-{{referenceURI}}.html">{{header}}</a>
+        {{#ifReference ../rootName}}
+        <ul>
+        {{#eachSection reference}}
+        {{#ifDepth 2 ../../../options.[nav-depth]}}
+        <li>
+        <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">{{header}}</a>
+        </li>
+        {{/ifDepth}}
+        {{/eachSection}}
+        </ul>
+        {{/ifReference}}
+        </li>
+        {{/eachRoot}}
+
+        </ul>
 
         </nav>
+
+        <!--<nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">-->
+          <!--<ul class="pattern-nav">-->
+            <!--<li>-->
+              <!--<a href="./">Home</a>-->
+            <!--</li>-->
+            <!--<li class="current-page">-->
+              <!--<a href="">I am a link</a>-->
+              <!--<ul>-->
+                <!--<li class="current-page">-->
+                  <!--<a href="">Deeper link</a>-->
+                <!--</li>-->
+              <!--</ul>-->
+            <!--</li>-->
+          <!--</ul>-->
+
+        <!--</nav>-->
 
       </div>
     </div>
