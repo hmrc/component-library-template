@@ -3244,14 +3244,14 @@ ul.theme-grid li a:hover {
 .toc__list li li a {
   border-left: 4px solid transparent; }
 
-.toc__list .current-page a {
+.toc__list .current-page > a {
   background-color: #f0f0f0;
   font-weight: bold !important;
   letter-spacing: 0;
   border-left: 4px solid #005ea5; }
-.toc__list .current-page a:hover {
+.toc__list .current-page > a:hover {
   border-left-color: #005ea5; }
-.toc__list .current-page a::after {
+.toc__list .current-page > a::after {
   position: absolute;
   right: 0;
   font-size: 12px;
