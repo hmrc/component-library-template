@@ -887,7 +887,7 @@ hr {
   text-transform: none;
   font-size: 18px;
   line-height: 1.2;
-  background-image: url(/images/icon-pointer.png);
+  background-image: url(images/icon-pointer.png);
   background-repeat: no-repeat;
   background-position: 100% 50%;
   padding: 0.36842em 2.15789em 0.21053em 0.84211em;
@@ -904,7 +904,7 @@ hr {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .button-start,
   .button-get-started {
-    background-image: url(/images/icon-pointer-2x.png);
+    background-image: url(images/icon-pointer-2x.png);
     background-size: 30px 19px;
   }
 }
@@ -918,12 +918,12 @@ hr {
 .icon-calendar {
   width: 27px;
   height: 27px;
-  background-image: url(/images/icon-calendar.png);
+  background-image: url(images/icon-calendar.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-calendar {
-    background-image: url(/images/icon-calendar-2x.png);
+    background-image: url(images/icon-calendar-2x.png);
     background-size: 100%;
   }
 }
@@ -931,12 +931,12 @@ hr {
 .icon-file-download {
   width: 30px;
   height: 39px;
-  background-image: url(/images/icon-file-download.png);
+  background-image: url(images/icon-file-download.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-file-download {
-    background-image: url(/images/icon-file-download-2x.png);
+    background-image: url(images/icon-file-download-2x.png);
     background-size: 100%;
   }
 }
@@ -944,12 +944,12 @@ hr {
 .icon-important {
   width: 35px;
   height: 35px;
-  background-image: url(/images/icon-important.png);
+  background-image: url(images/icon-important.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-important {
-    background-image: url(/images/icon-important-2x.png);
+    background-image: url(images/icon-important-2x.png);
     background-size: 100%;
   }
 }
@@ -957,12 +957,12 @@ hr {
 .icon-information {
   width: 27px;
   height: 27px;
-  background-image: url(/images/icon-information.png);
+  background-image: url(images/icon-information.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-information {
-    background-image: url(/images/icon-information-2x.png);
+    background-image: url(images/icon-information-2x.png);
     background-size: 100%;
   }
 }
@@ -970,12 +970,12 @@ hr {
 .icon-locator {
   width: 26px;
   height: 36px;
-  background-image: url(/images/icon-locator.png);
+  background-image: url(images/icon-locator.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-locator {
-    background-image: url(/images/icon-locator-2x.png);
+    background-image: url(images/icon-locator-2x.png);
     background-size: 100%;
   }
 }
@@ -983,12 +983,12 @@ hr {
 .icon-pointer {
   width: 30px;
   height: 19px;
-  background-image: url(/images/icon-pointer.png);
+  background-image: url(images/icon-pointer.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-pointer {
-    background-image: url(/images/icon-pointer-2x.png);
+    background-image: url(images/icon-pointer-2x.png);
     background-size: 100%;
   }
 }
@@ -996,12 +996,12 @@ hr {
 .icon-pointer-black {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-pointer-black.png);
+  background-image: url(images/icon-pointer-black.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-pointer-black {
-    background-image: url(/images/icon-pointer-black-2x.png);
+    background-image: url(images/icon-pointer-black-2x.png);
     background-size: 100%;
   }
 }
@@ -1009,12 +1009,12 @@ hr {
 .icon-search {
   width: 30px;
   height: 22px;
-  background-image: url(/images/icon-search.png);
+  background-image: url(images/icon-search.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-search {
-    background-image: url(/images/icon-search-2x.png);
+    background-image: url(images/icon-search-2x.png);
     background-size: 100%;
   }
 }
@@ -1022,12 +1022,12 @@ hr {
 .icon-step-1 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-1.png);
+  background-image: url(images/icon-steps/icon-step-1.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-1 {
-    background-image: url(/images/icon-steps/icon-step-1-2x.png);
+    background-image: url(images/icon-steps/icon-step-1-2x.png);
     background-size: 100%;
   }
 }
@@ -1035,12 +1035,12 @@ hr {
 .icon-step-2 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-2.png);
+  background-image: url(images/icon-steps/icon-step-2.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-2 {
-    background-image: url(/images/icon-steps/icon-step-2-2x.png);
+    background-image: url(images/icon-steps/icon-step-2-2x.png);
     background-size: 100%;
   }
 }
@@ -1048,12 +1048,12 @@ hr {
 .icon-step-3 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-3.png);
+  background-image: url(images/icon-steps/icon-step-3.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-3 {
-    background-image: url(/images/icon-steps/icon-step-3-2x.png);
+    background-image: url(images/icon-steps/icon-step-3-2x.png);
     background-size: 100%;
   }
 }
@@ -1061,12 +1061,12 @@ hr {
 .icon-step-4 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-4.png);
+  background-image: url(images/icon-steps/icon-step-4.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-4 {
-    background-image: url(/images/icon-steps/icon-step-4-2x.png);
+    background-image: url(images/icon-steps/icon-step-4-2x.png);
     background-size: 100%;
   }
 }
@@ -1074,12 +1074,12 @@ hr {
 .icon-step-5 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-5.png);
+  background-image: url(images/icon-steps/icon-step-5.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-5 {
-    background-image: url(/images/icon-steps/icon-step-5-2x.png);
+    background-image: url(images/icon-steps/icon-step-5-2x.png);
     background-size: 100%;
   }
 }
@@ -1087,12 +1087,12 @@ hr {
 .icon-step-6 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-6.png);
+  background-image: url(images/icon-steps/icon-step-6.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-6 {
-    background-image: url(/images/icon-steps/icon-step-6-2x.png);
+    background-image: url(images/icon-steps/icon-step-6-2x.png);
     background-size: 100%;
   }
 }
@@ -1100,12 +1100,12 @@ hr {
 .icon-step-7 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-7.png);
+  background-image: url(images/icon-steps/icon-step-7.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-7 {
-    background-image: url(/images/icon-steps/icon-step-7-2x.png);
+    background-image: url(images/icon-steps/icon-step-7-2x.png);
     background-size: 100%;
   }
 }
@@ -1113,12 +1113,12 @@ hr {
 .icon-step-8 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-8.png);
+  background-image: url(images/icon-steps/icon-step-8.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-8 {
-    background-image: url(/images/icon-steps/icon-step-8-2x.png);
+    background-image: url(images/icon-steps/icon-step-8-2x.png);
     background-size: 100%;
   }
 }
@@ -1126,12 +1126,12 @@ hr {
 .icon-step-9 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-9.png);
+  background-image: url(images/icon-steps/icon-step-9.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-9 {
-    background-image: url(/images/icon-steps/icon-step-9-2x.png);
+    background-image: url(images/icon-steps/icon-step-9-2x.png);
     background-size: 100%;
   }
 }
@@ -1139,12 +1139,12 @@ hr {
 .icon-step-10 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-10.png);
+  background-image: url(images/icon-steps/icon-step-10.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-10 {
-    background-image: url(/images/icon-steps/icon-step-10-2x.png);
+    background-image: url(images/icon-steps/icon-step-10-2x.png);
     background-size: 100%;
   }
 }
@@ -1152,12 +1152,12 @@ hr {
 .icon-step-11 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-11.png);
+  background-image: url(images/icon-steps/icon-step-11.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-11 {
-    background-image: url(/images/icon-steps/icon-step-11-2x.png);
+    background-image: url(images/icon-steps/icon-step-11-2x.png);
     background-size: 100%;
   }
 }
@@ -1165,12 +1165,12 @@ hr {
 .icon-step-12 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-12.png);
+  background-image: url(images/icon-steps/icon-step-12.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-12 {
-    background-image: url(/images/icon-steps/icon-step-12-2x.png);
+    background-image: url(images/icon-steps/icon-step-12-2x.png);
     background-size: 100%;
   }
 }
@@ -1178,12 +1178,12 @@ hr {
 .icon-step-13 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-13.png);
+  background-image: url(images/icon-steps/icon-step-13.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-13 {
-    background-image: url(/images/icon-steps/icon-step-13-2x.png);
+    background-image: url(images/icon-steps/icon-step-13-2x.png);
     background-size: 100%;
   }
 }
@@ -1191,12 +1191,12 @@ hr {
 .icon-step-14 {
   width: 23px;
   height: 23px;
-  background-image: url(/images/icon-steps/icon-step-14.png);
+  background-image: url(images/icon-steps/icon-step-14.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-14 {
-    background-image: url(/images/icon-steps/icon-step-14-2x.png);
+    background-image: url(images/icon-steps/icon-step-14-2x.png);
     background-size: 100%;
   }
 }
@@ -1241,9 +1241,9 @@ hr {
 }
 
 .c-icon--search {
-  background: url(../images/icons/icon--search.png);
-  background: url(../images/icons/icon--search.svg), -webkit-linear-gradient(transparent, transparent);
-  background: url(../images/icons/icon--search.svg), linear-gradient(transparent, transparent);
+  background: url(..images/icons/icon--search.png);
+  background: url(..images/icons/icon--search.svg), -webkit-linear-gradient(transparent, transparent);
+  background: url(..images/icons/icon--search.svg), linear-gradient(transparent, transparent);
 }
 
 .c-icon--has-bg-icon {
@@ -1251,7 +1251,7 @@ hr {
 }
 
 .icon-icon--search {
-  background-image: url(../images/icons/sprite.svg);
+  background-image: url(..images/icons/sprite.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1948,7 +1948,7 @@ input[type=number] {
   font-size: 14px;
   line-height: 1.14286;
   float: left;
-  background-image: url(/images/separator.png);
+  background-image: url(images/separator.png);
   background-position: 0% 50%;
   background-repeat: no-repeat;
   list-style: none;
@@ -1966,7 +1966,7 @@ input[type=number] {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .breadcrumbs li {
-    background-image: url(/images/separator-2x.png);
+    background-image: url(images/separator-2x.png);
     background-size: 6px 11px;
   }
 }
@@ -2410,14 +2410,14 @@ a:active {
   display: none;
   text-decoration: none;
   text-indent: -9999em;
-  background-image: url(/images/anchored-heading-icon.png);
+  background-image: url(images/anchored-heading-icon.png);
   background-repeat: no-repeat;
   background-position: left center;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .anchored-heading__icon {
-    background-image: url(/images/anchored-heading-icon-2x.png);
+    background-image: url(images/anchored-heading-icon-2x.png);
     background-size: 23px 14px;
   }
 }
@@ -2713,14 +2713,14 @@ a:active {
   height: 17px;
   overflow: hidden;
   text-indent: -999em;
-  background-image: url(/images/open-government-licence.png);
+  background-image: url(images/open-government-licence.png);
   background-repeat: no-repeat;
   background-size: 41px 17px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .footer__licence-logo {
-    background-image: url(/images/open-government-licence_2x.png);
+    background-image: url(images/open-government-licence_2x.png);
   }
 }
 
@@ -2769,7 +2769,7 @@ a:active {
   white-space: nowrap;
   padding: 115px 0 0 0;
   min-width: 125px;
-  background-image: url(/images/govuk-crest.png);
+  background-image: url(images/govuk-crest.png);
   background-size: 125px 102px;
   background-repeat: no-repeat;
   background-position: 50% 0%;
@@ -2779,7 +2779,7 @@ a:active {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .footer__copyright-logo {
-    background-image: url(/images/govuk-crest-2x.png);
+    background-image: url(images/govuk-crest-2x.png);
   }
 }
 
@@ -2797,25 +2797,6 @@ a:active {
 
   .flexbox .footer__copyright-logo, .flexboxtweener .footer__copyright-logo {
     text-align: right;
-  }
-}
-
-.govuk-logo {
-  font-weight: bold;
-  background-image: url(/images/gov.uk_logotype_crown.png);
-  background-repeat: no-repeat;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .govuk-logo {
-    background-image: url(/images/gov.uk_logotype_crown-2x.png);
-    background-size: 36px 32px;
-  }
-}
-
-@media (min-width: 768px) {
-  .govuk-logo {
-    background-position: 0 1px;
   }
 }
 
@@ -2872,16 +2853,14 @@ a:active {
   text-decoration: underline;
 }
 
-.header__brand .govuk-logo {
+
+.govuk-logo {
+  font-weight: bold;
   float: left;
   background-position: 0 4px;
-  margin-right: 8px;
-}
-
-@media (min-width: 768px) {
-  .header__brand .govuk-logo {
-    margin-right: 5px;
-  }
+  background-image: url(images/gov.uk_logotype_crown.png);
+  background-repeat: no-repeat;
+  background-size: 36px 32px;
 }
 
 .header__brand a:link, .header__brand a:visited {
@@ -3322,7 +3301,7 @@ a.hero-button {
   font-size: 18px;
   line-height: 1.2;
   box-shadow: 0 2px 0 #004172;
-  background-image: url(/images/hero-button/arrow.png);
+  background-image: url(images/hero-button/arrow.png);
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 95% 50%;
@@ -3390,7 +3369,7 @@ a.hero-button:active:before {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   a.hero-button {
-    background-image: url(/images/hero-button/arrow@2x.png);
+    background-image: url(images/hero-button/arrow@2x.png);
   }
 }
 
@@ -3957,7 +3936,7 @@ a.hero-button:active {
     width: 20px;
     height: 20px;
     float: right;
-    background-image: url(/images/govuk-icn-numbered-list.png);
+    background-image: url(images/govuk-icn-numbered-list.png);
     background-repeat: no-repeat;
     background-position: left center;
   }
@@ -3965,7 +3944,7 @@ a.hero-button:active {
 
 @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi), only screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .js .toc-show__icon {
-    background-image: url(/images/govuk-icn-numbered-list@2x.png);
+    background-image: url(images/govuk-icn-numbered-list@2x.png);
     background-size: 20px 20px;
   }
 }
@@ -3985,7 +3964,7 @@ a.hero-button:active {
     height: 20px;
     float: right;
     text-indent: -10000px;
-    background-image: url(/images/govuk-icn-close.png);
+    background-image: url(images/govuk-icn-close.png);
     background-repeat: no-repeat;
     background-position: left center;
   }
@@ -3993,7 +3972,7 @@ a.hero-button:active {
 
 @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi), only screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .js .toc__close {
-    background-image: url(/images/govuk-icn-close@2x.png);
+    background-image: url(images/govuk-icn-close@2x.png);
     background-size: 20px 20px;
   }
 }
@@ -4141,13 +4120,13 @@ a.hero-button:active {
 }
 
 .govuk-previous-and-next-navigation li.next-page a:before {
-  background: transparent url(/images/arrow-sprite.png) no-repeat -102px -11px;
+  background: transparent url(images/arrow-sprite.png) no-repeat -102px -11px;
   margin-right: -32px;
   float: right;
 }
 
 .govuk-previous-and-next-navigation li.previous-page a:before {
-  background: transparent url(/images/arrow-sprite.png) no-repeat -20px -11px;
+  background: transparent url(images/arrow-sprite.png) no-repeat -20px -11px;
   margin-left: -32px;
   float: left;
 }
@@ -4187,7 +4166,7 @@ a.hero-button:active {
   font-size: 14px;
   line-height: 1.14286;
   float: left;
-  background-image: url(/images/separator.png);
+  background-image: url(images/separator.png);
   background-position: 0% 50%;
   background-repeat: no-repeat;
   list-style: none;
@@ -4205,7 +4184,7 @@ a.hero-button:active {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .breadcrumbs li {
-    background-image: url(/images/separator-2x.png);
+    background-image: url(images/separator-2x.png);
     background-size: 6px 11px;
   }
 }
@@ -4499,7 +4478,7 @@ ul.theme-grid li a:hover {
   content: "";
   display: block;
   position: absolute;
-  background-image: url("/images/down-2x.png");
+  background-image: url("images/down-2x.png");
   background-repeat: no-repeat;
   background-position: center right;
   background-size: 12px;
@@ -4513,7 +4492,7 @@ ul.theme-grid li a:hover {
   content: "";
   display: block;
   position: absolute;
-  background-image: url("/images/down-2x.png");
+  background-image: url("images/down-2x.png");
   background-repeat: no-repeat;
   background-position: center right;
   background-size: 12px;
@@ -4542,6 +4521,10 @@ ul.theme-grid li a:hover {
   background-color: transparent;
   font-weight: normal !important;
   padding-left: 20px;
+}
+
+.toc__list .current-page a + ul li a:hover {
+  border-color: #2b8cc4;
 }
 
 .toc__list .current-page a:hover {
@@ -4702,7 +4685,7 @@ ul ul.section + ul.section {
 .markdown p.example-grid {
   width: 100%;
   max-width: none;
-  background: url("/images/grid.png") 0 0 repeat;
+  background: url("images/grid.png") 0 0 repeat;
   margin: 0;
   height: 30px;
   overflow: hidden;
@@ -5006,7 +4989,7 @@ ul ul.section + ul.section {
   text-indent: -5000px;
   color: #fff;
   background-color: #005ea5;
-  background-image: url("/images/search-button.png");
+  background-image: url("images/search-button.png");
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
@@ -5027,7 +5010,7 @@ ul ul.section + ul.section {
   line-height: 25px;
   position: relative;
   background-color: #005ea5;
-  background-image: url(/images/search-button.png);
+  background-image: url(images/search-button.png);
   background-repeat: no-repeat;
   background-position: 0 50%;
   border-radius: 0;
