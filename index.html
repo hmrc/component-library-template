@@ -10,7 +10,7 @@
   <!-- Use title if it's in the page YAML frontmatter -->
   <title>About the Design System</title>
 
-  <link rel="stylesheet" href="public/assets/stylesheets/component-library.css">
+  <link rel="stylesheet" href="/hmrc-component-library-template/public/assets/stylesheets/component-library.css">
 
   <!--[if gt IE 8]><!--><link href="public/assets/stylesheets/govuk-template.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
   <!--[if IE 6]><link href="public/assets/stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
@@ -19,7 +19,10 @@
 
   <link href="public/assets/stylesheets/govuk-template-print.css" media="print" rel="stylesheet" type="text/css" />
 
+  <link rel="stylesheet" href="public/assets/stylesheets/vendor/highlight/github.css">
+
   <script src="public/assets/javascripts/application.js"></script>
+  {{{styles}}}
 </head>
 
 <body class="no-js">
@@ -166,29 +169,23 @@
 
         </nav>
 
-        <!--<nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">-->
-        <!--<ul class="pattern-nav">-->
-        <!--<li>-->
-        <!--<a href="./">Home</a>-->
-        <!--</li>-->
-        <!--<li class="current-page">-->
-        <!--<a href="">I am a link</a>-->
-        <!--<ul>-->
-        <!--<li class="current-page">-->
-        <!--<a href="">Deeper link</a>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <!--</ul>-->
-
-        <!--</nav>-->
-
       </div>
     </div>
     <div class="app-pane__content toc-open-disabled">
-      <main id="content" class="technical-documentation markdown" data-module="anchored-headings">
+      <main class="technical-documentation markdown" data-module="anchored-headings">
         <div class="grid-row">
           <div class="column-full">
+            <h1 class="heading-48">Component Library</h1>
+            <div class="alert alert--info">
+              <p class="alert__message">
+                This component library is a visual representation of the styles used to build HMRC's services.
+              </p>
+              <h3>Questions and Issues</h3>
+              <p class="alert__message">
+                If you have questions about how to use either a component or the library, or would like to report an issue then please get in touch using one of our
+                <a href="http://hmrc.github.io/assets-frontend#support-and-feedback">support channels</a>.
+              </p>
+            </div>
 
             <article class="comp-lib-main">
               {{#if homepage}}
@@ -208,7 +205,6 @@
                 {{else}}
                 <section id="kssref-{{referenceURI}}">
                   {{/ifDepth}}
-                  <div>
                     <h{{depth}}>
                     <a href="#kssref-{{referenceURI}}" class="comp-lib-menu-link">{{header}}</a>
                     </h{{depth}}>
@@ -242,15 +238,13 @@
                       {{#removePrefix}}{{{description}}}{{/removePrefix}}
                     </div>
                     {{/if}}
-                  </div>
 
                   <!-- pattern examples -->
                   {{#if markup}}
                   <div>
-                    <div class="comp-lib-pattern-example">
-                      <div class="comp-lib-pattern-component comp-lib-clearfix{{#ifCond background 'dark'}} comp-lib-pattern-component--dark{{/ifCond}}">
+                    <div class="example">
                         {{{markup}}}
-                      </div>
+                    </div>
                       <div class="comp-lib-code-example">
                         <pre class="comp-lib-pre"><code class="comp-lib-code html">{{markup}}</code></pre>
                       </div>
@@ -265,7 +259,7 @@
                       <div class="comp-lib-pattern-component comp-lib-clearfix{{#ifCond background 'dark'}} comp-lib-pattern-component--dark{{/ifCond}}">
                         {{{markup}}}
                       </div>
-                      <div class="comp-lib-code-example">
+                      <div class="example">
                         <pre class="comp-lib-pre"><code class="comp-lib-code html">{{markup}}</code></pre>
                       </div>
                     </div>

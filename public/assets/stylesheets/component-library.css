@@ -3728,6 +3728,7 @@ a.hero-button:active {
   background: none;
   color: inherit;
   padding: 3px 0px;
+  border: none;
 }
 
 .technical-documentation code {
@@ -3867,6 +3868,10 @@ a.hero-button:active {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: normal;
+}
+
+.toc__list > ul > li {
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -4620,6 +4625,10 @@ ul ul.section + ul.section {
   border: 1px solid #bfc1c3;
   margin: 30px 0;
   padding: 60px 30px 30px 30px;
+}
+
+.markdown .example + div{
+  margin-top: -31px;
 }
 
 .markdown .example p {
