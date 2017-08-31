@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" class="no-js tech-docs">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="robots" content="noindex">
+
+    <title>HMRC Design System</title>
+
+    <link rel="stylesheet" href="/public/assets/stylesheets/design-system.css">
+
+    <!--[if gt IE 8]><!--><link rel="stylesheet" href="/public/stylesheets/application.min.css"><!--<![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/public/stylesheets/application-ie.min.css"><![endif]-->
+  </head>
+
+  <body>
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="skip-link">Skip to main content</a>
+
+        <header class="design-system-header design-system-header--full-width">
+          <div class="design-system-header__container">
+            <div class="design-system-header__brand">
+                <a href="/">
+                  <span class="design-system-govuk-logo">
+                    <img class="design-system-govuk-logo__printable-crown" src="/public/assets/images/gov.uk_logotype_crown_invert_trans.png" height="32" width="36">
+                    GOV.UK
+                  </span>
+
+                  <span class="design-system-header__title">HMRC Design System</span>
+                </a>
+            </div>
+
+            <!--
+            <div class="pattern-search pattern-search--in-header">
+              <input type="text" name="pattern-query" class="pattern-search__input" placeholder="Search Design System" autocomplete="off">
+              <ul class="search-results js-search-results">
+              </ul>
+            </div>
+           -->
+
+            <div class="mobile-nav-trigger">
+              <input class="button js-mobile-nav-toggle" type="submit" value="Menu">
+            </div>
+          </div>
+        </header>
+
+        <div class="design-system phase-banner">
+          <p>
+            <strong class="phase-tag">ALPHA</strong>
+            <span>This is a prototype – do not use this guidance in your service</span>
+          </p>
+        </div>
+      </div>
+
+      <div style="clear:left;" class="app-pane__body">
+        <div class="app-pane__toc">
+          <div class="toc" data-module="table-of-contents">
+            <nav id="toc" class="js-toc-list toc__list">
+            </nav>
+          </div>
+        </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation markdown" data-module="anchored-headings">
+          </main>
+
+          <footer class="design-system-footer design-system-footer--full-width">
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    {{{scripts}}}
+  </body>
+</html>
