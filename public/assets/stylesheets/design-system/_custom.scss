@@ -1,0 +1,66 @@
+.design-system {
+  &.phase-banner {
+    padding: $gutter-half;
+  }
+}
+
+#toc > .nav-group {
+  margin-top: 15px;
+}
+
+.toc {
+  padding: 15px;
+}
+
+.toc__list {
+  a:link{
+    padding-left: 11px;
+    position: relative;
+    padding-right: 60px;
+  }
+}
+
+.toc__list a:visited {
+  color: $link-colour;
+}
+
+.toc__list a:first-letter {
+  text-transform: uppercase;
+}
+
+.toc__list ul.pattern-nav {
+  a:link {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.toc__list li a,
+.toc__list li li a{
+    border-left: 4px solid transparent;
+}
+
+.toc__list .current-page a {
+    background-color: darken($grey-4, 3%);
+    font-weight: bold !important;
+    letter-spacing: 0;
+    border-left: 4px solid $govuk-blue;
+
+    &:hover {
+      border-left-color: $govuk-blue;
+    }
+
+    //Copy of pattern status
+    &::after {
+      position: absolute;
+      right: 0;
+      font-size: 12px;
+      padding: 0 10px 0 3px;
+      min-width: 56px;
+      text-align: right;
+      margin-top: 3px;
+      letter-spacing: 1;
+      color: $secondary-text-colour;
+    }
+}

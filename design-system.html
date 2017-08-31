@@ -12,6 +12,8 @@
 
     <!--[if gt IE 8]><!--><link rel="stylesheet" href="/public/stylesheets/application.min.css"><!--<![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="/public/stylesheets/application-ie.min.css"><![endif]-->
+
+    <script src="/public/assets/javascripts/vendor/modernizr.js"></script>
   </head>
 
   <body>
@@ -63,10 +65,15 @@
         </div>
       </div>
 
+      <!-- TODO: mobile_nav -->
+
       <div style="clear:left;" class="app-pane__body">
         <div class="app-pane__toc">
           <div class="toc" data-module="table-of-contents">
             <nav id="toc" class="js-toc-list toc__list">
+              <ul class="pattern-nav">
+              <!-- TODO: Dynamically generate nav  -->
+              <ul>
             </nav>
           </div>
         </div>

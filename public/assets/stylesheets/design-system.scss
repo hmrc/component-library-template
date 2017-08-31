@@ -17,9 +17,6 @@ $path: '/public/assets';
 @import "design-system/modules/header";
 @import "design-system/modules/sub-nav";
 @import "design-system/modules/skip-link";
+@import "design-system/modules/toc";
 
-.design-system {
-  &.phase-banner {
-    padding: $gutter-half;
-  }
-}
+@import "design-system/custom";

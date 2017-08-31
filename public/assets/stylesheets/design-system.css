@@ -316,5 +316,196 @@
       .skip-link:focus {
         padding: 5px 30px; } }
 
+.toc {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.14286;
+  padding: 15px; }
+  @media (min-width: 641px) {
+    .toc {
+      font-size: 16px;
+      line-height: 1.25; } }
+  .toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .toc__close {
+    display: none; }
+  .toc a:link, .toc a:visited {
+    text-decoration: none; }
+  .toc a:hover {
+    text-decoration: underline; }
+  .toc__list a:link, .toc__list a:visited {
+    display: block;
+    padding: 8px 0;
+    letter-spacing: 0.03em; }
+    .toc__list a:link:hover, .toc__list a:visited:hover {
+      text-decoration: none;
+      color: #005ea5;
+      border-left: 4px solid #2b8cc4; }
+    .toc__list a:link.toc-link--in-view, .toc__list a:visited.toc-link--in-view {
+      font-weight: bold;
+      letter-spacing: normal; }
+  .toc__list > ul > li > a:link {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: normal; }
+    @media (min-width: 641px) {
+      .toc__list > ul > li > a:link {
+        font-size: 19px;
+        line-height: 1.31579; } }
+  .toc__list > ul > li > ul {
+    margin-bottom: 20px; }
+  .toc__list li li li {
+    margin-left: 15px; }
+
+.toc-show {
+  display: none; }
+
+@media (min-width: 641px) {
+  .toc {
+    padding: 15px 30px; } }
+
+@media (max-width: 640px) {
+  .js {
+    /* Applied to <html> */ }
+    .js .toc {
+      display: none; }
+      .js .toc li li li {
+        display: none; }
+    .js .toc-show {
+      display: block;
+      position: sticky;
+      top: 0;
+      box-sizing: border-box;
+      width: 100%;
+      z-index: 10; }
+      .js .toc-show__label {
+        display: block;
+        position: relative;
+        z-index: 10;
+        padding: 15px 15px 10px;
+        background: #f8f8f8;
+        border-bottom: 1px solid #bfc1c3;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        color: #0b0c0c;
+        text-decoration: none; }
+        @supports (backdrop-filter: blur(2px)) {
+          .js .toc-show__label {
+            background: rgba(248, 248, 248, 0.95);
+            backdrop-filter: blur(2px); } }
+      .js .toc-show__icon {
+        width: 20px;
+        height: 20px;
+        float: right;
+        background-image: url("/public/assetsgovuk-icn-numbered-list.png");
+        background-repeat: no-repeat;
+        background-position: left center; } }
+      @media only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 640px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 640px) and (-o-min-device-pixel-ratio: 20 / 10), only screen and (max-width: 640px) and (min-device-pixel-ratio: 2), only screen and (max-width: 640px) and (min-resolution: 192dpi), only screen and (max-width: 640px) and (min-resolution: 2dppx) {
+        .js .toc-show__icon {
+          background-image: url("/public/assetsgovuk-icn-numbered-list@2x.png");
+          background-size: 20px 20px; } }
+
+@media (max-width: 640px) {
+    .js .toc__list {
+      margin-right: 45px; }
+    .js .toc__close {
+      display: block;
+      position: sticky;
+      right: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      float: right;
+      text-indent: -10000px;
+      background-image: url("/public/assetsgovuk-icn-close.png");
+      background-repeat: no-repeat;
+      background-position: left center; } }
+    @media only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 640px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 640px) and (-o-min-device-pixel-ratio: 20 / 10), only screen and (max-width: 640px) and (min-device-pixel-ratio: 2), only screen and (max-width: 640px) and (min-resolution: 192dpi), only screen and (max-width: 640px) and (min-resolution: 2dppx) {
+      .js .toc__close {
+        background-image: url("/public/assetsgovuk-icn-close@2x.png");
+        background-size: 20px 20px; } }
+
+@media (max-width: 640px) {
+    .js.toc-open {
+      overflow: hidden; }
+      .js.toc-open body {
+        height: 100%;
+        overflow: hidden; }
+      .js.toc-open .toc-show {
+        visibility: hidden; }
+      .js.toc-open .toc {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        background: #fff; }
+        @supports (backdrop-filter: blur(2px)) {
+          .js.toc-open .toc {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(2px); } }
+    .js .technical-documentation h1, .js .technical-documentation h2, .js .technical-documentation h3, .js .technical-documentation h4, .js .technical-documentation h5, .js .technical-documentation h6 {
+      padding-top: 30px;
+      margin-top: -15px; }
+    .js .technical-documentation h1 {
+      margin-top: 45px; }
+    .js .technical-documentation h1:first-child {
+      margin-top: -15px; } }
+
 .design-system.phase-banner {
   padding: 15px; }
+
+#toc > .nav-group {
+  margin-top: 15px; }
+
+.toc {
+  padding: 15px; }
+
+.toc__list a:link {
+  padding-left: 11px;
+  position: relative;
+  padding-right: 60px; }
+
+.toc__list a:visited {
+  color: #005ea5; }
+
+.toc__list a:first-letter {
+  text-transform: uppercase; }
+
+.toc__list ul.pattern-nav a:link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25; }
+
+.toc__list li a,
+.toc__list li li a {
+  border-left: 4px solid transparent; }
+
+.toc__list .current-page a {
+  background-color: #f0f0f0;
+  font-weight: bold !important;
+  letter-spacing: 0;
+  border-left: 4px solid #005ea5; }
+  .toc__list .current-page a:hover {
+    border-left-color: #005ea5; }
+  .toc__list .current-page a::after {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    padding: 0 10px 0 3px;
+    min-width: 56px;
+    text-align: right;
+    margin-top: 3px;
+    letter-spacing: 1;
+    color: #6f777b; }
