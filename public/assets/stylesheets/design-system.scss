@@ -1,0 +1,24 @@
+$path: '/public/assets';
+
+@import "govuk_frontend_toolkit/stylesheets/colours";
+@import "govuk_frontend_toolkit/stylesheets/conditionals";
+@import "govuk_frontend_toolkit/stylesheets/css3";
+@import "govuk_frontend_toolkit/stylesheets/grid_layout";
+@import "govuk_frontend_toolkit/stylesheets/helpers";
+@import "govuk_frontend_toolkit/stylesheets/measurements";
+@import "govuk_frontend_toolkit/stylesheets/typography";
+@import "govuk_frontend_toolkit/stylesheets/url-helpers";
+
+@import "design-system/utilities/fonts";
+@import "design-system/utilities/printable";
+
+@import "design-system/modules/app-pane";
+@import "design-system/modules/govuk-logo";
+@import "design-system/modules/header";
+@import "design-system/modules/skip-link";
+
+.design-system {
+  &.phase-banner {
+    padding: $gutter-half;
+  }
+}
