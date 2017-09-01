@@ -64,3 +64,49 @@
       color: $secondary-text-colour;
     }
 }
+
+.design-system-footer {
+  margin-top: 5px;
+}
+
+.footer-container {
+  flex-flow: wrap;
+
+  .heading-medium {
+    color: $black;
+    margin-bottom: 0;
+
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
+  }
+
+  .footer__navigation {
+    width: 100%;
+    margin-bottom: $gutter;
+    display: flex;
+    flex-direction: row;
+
+    @include media(mobile) {
+      flex-direction: column;
+
+      .footer__navigation--column {
+        margin-top: $gutter-half;
+      }
+    }
+
+    & ul li a {
+      display: block;
+      font-size: 16px;
+      padding: 10px 0 0;
+    }
+  }
+}
+
+.footer__navigation--column {
+  flex: 1;
+  max-width: 25%;
+  @include media(mobile) {
+      max-width: 100%;
+  }
+}
