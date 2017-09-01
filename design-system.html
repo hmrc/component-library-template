@@ -9,6 +9,12 @@
     <title>HMRC Design System</title>
 
     <link rel="stylesheet" href="/public/assets/stylesheets/design-system.css">
+    <link rel="stylesheet" href="public/assets/stylesheets/vendor/highlight/github.css">
+
+    <!--[if gt IE 8]><!--><link href="public/assets/stylesheets/govuk-template.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+    <!--[if IE 6]><link href="public/assets/stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 7]><link href="public/assets/stylesheets/govuk-template-ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 8]><link href="public/assets/stylesheets/govuk-template-ie8.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
 
     <!--[if gt IE 8]><!--><link rel="stylesheet" href="/public/stylesheets/application.min.css"><!--<![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="/public/stylesheets/application-ie.min.css"><![endif]-->
@@ -79,7 +85,115 @@
         </div>
 
         <div class="app-pane__content toc-open-disabled">
-          <main id="content" class="technical-documentation markdown" data-module="anchored-headings">
+          <main id="design-system-content" class="technical-documentation markdown" data-module="anchored-headings">
+            <div class="grid-row">
+              <div class="column-full">
+                {{#unless copyDone}}
+                <div class="banner banner__out-of-date">
+                  <p>This content has not yet been written using the Design System content guidelines</p>
+                </div>
+                {{/unless}}
+
+                <div class="pattern-header">
+                  <p class="section-heading">{{ current_section }}</p>
+
+                  <!--
+                  TODO: set title as data
+                  <h1>{{ title }}</h1>
+                  -->
+                </div>
+
+                {{#if description}}
+                {{{ description }}}
+                {{/if}}
+
+                {{#if markup}}
+                <div class="example">{{{ markup }}}</div>
+                <pre class="highlight html"><code>{{ markup }}</code></pre>
+                {{/if}}
+
+                <div id="related-content" class="related-content">
+                  <div class="grid-row">
+                    {{#if related}}
+                    <div class="column-one-quarter related-content-grid-item">
+                      <h2>Related patterns</h2>
+
+                      <ul class="list">
+                        {{!-- {{#each related}} --}}
+                          <li><a href="/design-patterns/patterns/patterns/{{ url }}">{{ title }}</a></li>
+                        {{!-- {{/each}} --}}
+                      </ul>
+                    </div>
+                    {{/if}}
+
+                    {{#if isComponent}}
+                    {{#if similar}}
+                    <div class="column-one-quarter related-content-grid-item">
+                      <h2>Similar components</h2>
+
+                      <ul class="list">
+                        {{#each similar}}
+                        <li><a href="/design-patterns/patterns/components/{{ url }}">{{ title }}</a></li>
+                        {{/each}}
+                      </ul>
+                    </div>
+                    {{/if}}
+                    {{/if}}
+
+                    {{#if isPattern}}
+                    {{#if uses}}
+                    <div class="column-one-quarter related-content-grid-item">
+                      <h2>Uses components</h2>
+
+                      <ul class="list">
+                        {{#each uses}}
+                        <li><a href="/design-patterns/patterns/components/{{ url }}">{{ title }}</a></li>
+                        {{/each}}
+                      </ul>
+                    </div>
+                    {{/if}}
+                    {{/if}}
+
+                    <div class="column-one-quarter related-content-grid-item">
+                      <h2>Further resources</h2>
+
+                      <ul class="list">
+                        {{#if seprepo}}
+                        <li><a href="">{{ title }} repository on GitHub</a></li>
+                        {{/if}}
+
+                        {{!--
+                        TODO: make these links dynamic with a link_to helper
+                        <li>{{{link_to 'Edit this guidance on GitHub' edit_link}}}</li>
+                        <li>{{{link_to 'Raise an issue on GitHub' (issues_link title)}}}</li>
+                        <li>{{{link_to 'History of this page' history_link}}}</li>
+                        --}}
+
+                        <li><a href="#">Edit this guidance on GitHub</a></li>
+                        <li><a href="#">Raise an issue on GitHub</a></li>
+                        <li><a href="#">History of this page</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="column-one-quarter related-content-grid-item">
+                      <dl class="meta-data-bottom">
+                        {{#if aliases}}
+                        <dt>Also known as:</dt>
+                        <dd>{{ aliases }}</dd>
+                        {{/if}}
+                        <dt>Last reviewed:</dt>
+                        <dd>{{#if date}}{{ date }}{{else}}30 March 2017{{/if}}</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="callout">
+                  <h2 class="heading-medium">Get in touch</h2>
+                  <p>If you’ve got a question, idea or suggestion share it in <a href="https://ukgovernmentdigital.slack.com/messages/govuk-design-system">#govuk-design-system</a> on cross-government Slack (<a href="slack://channel?team=T04V6EBTR&amp;id=C6DMEH5R6">open in app</a>) or <a href="#">email the Design System team</a></p>
+                </div>
+              </div>
+            </div>
           </main>
 
           <footer class="design-system-footer design-system-footer--full-width">
@@ -115,6 +229,25 @@
         </div>
       </div>
     </div>
+
+    <script src="public/assets/javascripts/vendor/highlight/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+
+      function scaleExampleHeight() {
+        var scaleWrapper = document.querySelectorAll('.scale-wrapper')
+
+        for (var i = 0; i <= scaleWrapper.length - 1; i++) {
+          scaleWrapper[i].style.height = scaleWrapper[i].querySelector('.scale').offsetHeight / 2 + 'px'
+        }
+      }
+
+      window.addEventListener('resize', function() {
+        scaleExampleHeight()
+      })
+
+      scaleExampleHeight()
+    </script>
 
     {{{scripts}}}
   </body>

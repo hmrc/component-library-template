@@ -22,6 +22,7 @@
     "start": "node-sass -w --include-path node_modules public/assets/stylesheets/design-system.scss public/assets/stylesheets/design-system.css"
   },
   "devDependencies": {
+    "govuk-elements-sass": "^3.1.1",
     "govuk_frontend_toolkit": "^7.0.1",
     "node-sass": "^4.5.3"
   }
