@@ -1020,7 +1020,7 @@ main {
     .markdown p.example-grid {
       height: 60px; } }
 
-.markdown p, .markdown ul.list, .markdown ol.list, .markdown blockquote {
+.markdown p, .markdown ul.list, .markdown ol.list, .markdown blockquote, .markdown .example {
   max-width: 34em; }
 
 .markdown h1 {
