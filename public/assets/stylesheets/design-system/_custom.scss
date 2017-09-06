@@ -22,6 +22,10 @@ main {
 .design-system {
   &.phase-banner {
     padding: $gutter-half;
+
+    & .phase-tag {
+      background-color: #005ea5;
+    }
   }
 }
 
