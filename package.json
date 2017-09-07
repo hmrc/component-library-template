@@ -5,9 +5,6 @@
   "author": "HM Revenue & Customs",
   "homepage": "https://github.com/hmrc/component-library-template",
   "license": "Apache-2.0",
-  "contributors": [
-    "Rory Powis <rory.powis@digital.hmrc.gov.uk>"
-  ],
   "keywords": [
     "HMRC",
     "template",
@@ -20,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/hmrc/component-library-template/issues"
   },
-  "main": "template_config.js"
+  "main": "template_config.js",
+  "scripts": {
+    "start": "node-sass -w --include-path node_modules public/assets/stylesheets/design-system.scss public/assets/stylesheets/design-system.css"
+  },
+  "devDependencies": {
+    "govuk-elements-sass": "^3.1.1",
+    "govuk_frontend_toolkit": "^7.0.1",
+    "node-sass": "^4.5.3"
+  }
 }
