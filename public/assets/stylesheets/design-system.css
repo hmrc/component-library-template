@@ -489,9 +489,7 @@
 .masthead {
   background-color: #005ea5;
   padding: 30px;
-  color: white;
-  width: 101%;
-  margin-left: -32px; }
+  color: white; }
   @media (max-width: 767px) {
     .masthead {
       padding: 15px; } }
@@ -1140,6 +1138,8 @@ main {
       line-height: 1.25;
       background: #6f777b;
       color: white; }
+  .markdown > h4 {
+    font-weight: 700; }
   .markdown pre {
     padding: 0; }
     .markdown pre code {
