@@ -117,7 +117,9 @@ main {
     margin-top: 15px;
   }
 
-  > h1 {
+  > h1,
+  > .heading-xlarge {
+    @include bold-48();
     font-size: 48px;
 
     margin-top: em(15, 32);
@@ -129,8 +131,9 @@ main {
     }
   }
 
-  > h2 {
-    font-size: 36px;
+  > h2,
+  > .heading-large {
+    @include bold-36();
 
     margin-top: em(25, 24);
     margin-bottom: em(10, 24);
@@ -141,8 +144,9 @@ main {
     }
   }
 
-  > h3 {
-    font-size: 24px;
+  > h3,
+  > .heading-medium {
+    @include bold-24();
 
     margin-top: em(25, 20);
     margin-bottom: em(10, 20);
@@ -153,9 +157,9 @@ main {
     }
   }
 
-  > h4 {
-    font-size: 19px;
-    font-weight: 700;
+  > h4,
+  > .heading-small {
+    @include bold-19();
 
     margin-top: em(10, 16);
     margin-bottom: em(5, 16);
