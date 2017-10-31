@@ -1141,8 +1141,6 @@ main {
   .markdown .column-one-third > h2 {
     padding-top: 30px;
     margin-top: 15px; }
-  .markdown > h4 {
-    font-weight: 700; }
   .markdown pre {
     padding: 0; }
     .markdown pre code {
