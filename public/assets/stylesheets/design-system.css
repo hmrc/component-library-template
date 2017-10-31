@@ -1148,7 +1148,7 @@ main {
     list-style: disc; }
   .markdown ul, .markdown ol {
     padding: 0 0 0 20px;
-    margin: 15px 0 0; }
+    margin: 15px 0 45px; }
   .markdown ol li {
     list-style-type: decimal; }
   .markdown ul li {
