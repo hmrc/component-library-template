@@ -28,8 +28,6 @@
 
   }
 
-
-
   window.addEventListener('resize', function () {
     scaleExampleHeight()
   })
