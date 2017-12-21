@@ -1,0 +1,14 @@
+{"configurations": [
+  {
+      "type": "node",
+      "request": "launch",
+      "name": "Jasmine Tests",
+      "program": "${workspaceRoot}/node_modules/jasmine/bin/jasmine.js",
+      "args": [
+      ],
+      "env": {
+          "NODE_PATH": "."
+      }
+  }
+]
+}
