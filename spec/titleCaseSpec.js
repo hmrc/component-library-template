@@ -1,6 +1,6 @@
 
 describe('applying titleCase to a fragment', function() {
-var titleCase = require('../helpers/titleCase')
+  var titleCase = require('../helpers/titleCase')
   it('Should upper case the first letter of each word', function() {
     expect(titleCase('one two three')).toBe('One Two Three')
   })
