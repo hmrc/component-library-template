@@ -33,7 +33,7 @@
     el.addEventListener('click', function(){
       setTimeout(function(){
         scaleExampleHeight()
-      },10)
+      },100)
     })
   })
 
