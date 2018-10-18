@@ -199,7 +199,7 @@
 
 .design-system-header.design-system-header--full-width {
   margin-bottom: 0;
-  border-bottom: 10px solid #005ea5; }
+  border-bottom: 10px solid #008670; }
   .design-system-header.design-system-header--full-width .design-system-header__container {
     border-bottom: none;
     width: auto;
@@ -317,7 +317,7 @@
     border: 1px solid white;
     font-size: 16px; }
   .mobile-nav-trigger input.button.active {
-    background-color: #005ea5; }
+    background-color: #008670; }
   @media (min-width: 768px) {
     .mobile-nav-trigger {
       display: none; } }
@@ -498,7 +498,7 @@
  * </div>
  */
 .masthead {
-  background-color: #005ea5;
+  background-color: #008670;
   padding: 30px;
   color: white; }
   @media (max-width: 767px) {
@@ -1320,8 +1320,8 @@ dl.meta-data-bottom {
 
 .callout {
   padding: 30px;
-  background-color: #005ea5;
-  color: white;
+  background-color: #f8f8f8;
+  color: black;
   margin-top: 30px; }
   @media (max-width: 767px) {
     .callout {
@@ -1341,10 +1341,6 @@ dl.meta-data-bottom {
     max-width: 36em; }
   .callout ul {
     margin-bottom: 30px; }
-  .callout a {
-    color: white !important; }
-    .callout a:hover {
-      color: #74b9e1 !important; }
 
 .design-system-footer {
   margin-top: 5px; }
