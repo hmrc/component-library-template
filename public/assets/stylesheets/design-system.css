@@ -317,7 +317,7 @@
     border: 1px solid white;
     font-size: 16px; }
   .mobile-nav-trigger input.button.active {
-    background-color: #008670; }
+    background-color: #005ea5; }
   @media (min-width: 768px) {
     .mobile-nav-trigger {
       display: none; } }
