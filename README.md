@@ -40,6 +40,7 @@ Then every time you make an update to the template, just re-link and start the b
 # Inside assets-frontend
 $ npm link hmrc-component-library-template
 ```
+## Adding Custom Comment Tags	
 
 If you wish to pass custom data from your `.sass` comments to the 
 [component-library-template](https://github.com/hmrc/component-library-template) you can do so by adding a custom tag.
