@@ -75,6 +75,19 @@
       </div>
 
       <!-- TODO: mobile_nav -->
+        <nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation">
+          <ul class="app-mobile-nav__list">
+          {{#each sections}}
+            <li>{{  ../pathPrefix }} : {{ url }} : {{ title }}</li>
+            {{#if nav}}<ul>
+            {{#each nav}}
+              <li>{{ url }}{{ title }}</li>
+            {{/each}}
+            </ul>{{/if}}
+          {{/each}}
+        </ul>
+      </nav>
+
 
       <div class="app-pane__body">
         {{#if nav}}
