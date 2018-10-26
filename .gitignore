@@ -87,3 +87,9 @@ node_modules
 
 # IntelliJ
 .idea
+
+# VSCode
+.vscode/
+
+#JS Hint
+.jshintrc
