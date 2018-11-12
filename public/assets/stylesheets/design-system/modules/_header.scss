@@ -173,11 +173,31 @@ $active-nav-color: #1d8feb;
 }
 
 .mobile-nav-trigger {
-  float: left;
-  width: 25%;
+  position: absolute;
+  top: 6px;
+  right: 12px;
   padding-left: 15px;
   @include box-sizing(border-box);
+  @include core-19;
   height: 35px;
+  background-color: black;
+  color: white;
+  border: 0px;
+
+  &:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    border-width: 8.66px 5px 0 5px;
+    border-top-color: inherit;
+    content: "";
+    border-color: #fff;
+    margin-left: 5px
+  }
 
   input.button {
     padding: 7px 4px 6px 4px !important;

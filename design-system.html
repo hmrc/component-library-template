@@ -55,6 +55,11 @@
                   <span class="design-system-header__title">HMRC Design System</span>
                 </a>
             </div>
+            <div class="mobile-nav-trigger-wrapper">
+              <button id="mobile-nav-trigger" class="mobile-nav-trigger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="app-mobile-nav">
+                Menu
+              </button>
+            </div>
           </div>
         </header>
 
@@ -75,15 +80,16 @@
       </div>
 
       <!-- TODO: mobile_nav -->
-        <nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation">
+        <nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav js-hidden" role="navigation">
           <ul class="app-mobile-nav__list">
           {{#each sections}}
-            <li>{{  ../pathPrefix }} : {{ url }} : {{ title }}</li>
-            {{#if nav}}<ul>
-            {{#each nav}}
-              <li>{{ url }}{{ title }}</li>
-            {{/each}}
-            </ul>{{/if}}
+            <li><a href="{{ ../pathPrefix }}{{ url }}">{{ sentenceCase title }}</a>
+              {{#if nav}}<ul>
+              {{#each nav}}
+                <li><a href="{{ ../pathPrefix }}{{ url }}">{{ sentenceCase title }}</a></li>
+              {{/each}}
+              </ul>{{/if}}
+            </li>
           {{/each}}
         </ul>
       </nav>
