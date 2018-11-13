@@ -55,8 +55,8 @@
                   <span class="design-system-header__title">HMRC Design System</span>
                 </a>
             </div>
-            <div class="mobile-nav-trigger-wrapper">
-              <button id="mobile-nav-trigger" class="mobile-nav-trigger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="app-mobile-nav">
+            <div>
+              <button id="mobile-nav-trigger" class="design-system-header__navigation-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="app-mobile-nav">
                 Menu
               </button>
             </div>
@@ -84,7 +84,7 @@
           <ul class="app-mobile-nav__list">
           {{#each sections}}
             <li><a href="{{ ../pathPrefix }}{{ url }}">{{ sentenceCase title }}</a>
-              {{#if nav}}<ul>
+              {{#if nav}}<ul class="app-mobile-nav__subnav js-hidden">
               {{#each nav}}
                 <li><a href="{{ ../pathPrefix }}{{ url }}">{{ sentenceCase title }}</a></li>
               {{/each}}
