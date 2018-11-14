@@ -1,6 +1,5 @@
 .app-mobile-nav {
-  // display: none;
-
+    display: none;
   &--active {
     display: block;
 
@@ -26,10 +25,8 @@
     // @include govuk-typography-common;
     font-weight: bold;
     font-size: 19px;
-    //font-size: govuk-px-to-rem(19px);
 
     & > a {
-      // @include govuk-typography-weight-bold; // Override .govuk-link weight
       font-weight: bold;
       display: block;
       padding: 16px 20px 17px 20px;
@@ -52,11 +49,10 @@
   border-top: 1px solid $grey-3;
   border-bottom: 1px solid $grey-3;
   background-color: $white;
-  // display: none;
+  display: none;
 
   & > li {
     & > a {
-      // @include govuk-font(19);
       font-size: 16px;
       display: block;
       padding: 10px 20px;
@@ -70,7 +66,7 @@
   }
 }
 
-.js-enabled .app-mobile-nav__subnav--active {
+.app-mobile-nav__subnav--active {
   display: block;
 }
 
@@ -117,5 +113,20 @@
 }
 
 .js-enabled .app-mobile-nav__subnav-toggler--active {
-  border-top: 1px solid govuk-colour("white");
+  border-top: 1px solid $white;
+}
+
+.app-header-mobile-nav-toggler--active {
+    &::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border-width: 0 5px 8.66px 5px;
+    border-bottom-color: inherit;
+    border-color: #fff;
+  }
 }

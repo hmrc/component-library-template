@@ -185,10 +185,6 @@ $active-nav-color: #1d8feb;
   input.button.active {
     background-color: $govuk-blue;
   }
-
-  @include media(tablet) {
-    display: none;
-  }
 }
 
 .design-system-header__navigation-toggle {
@@ -202,10 +198,6 @@ $active-nav-color: #1d8feb;
   background-color: $black;
   color: $white;
   border: 0px;
-
-  input {
-    display: none;
-  }
 
   @include media(tablet) {
     display: none;
@@ -225,36 +217,4 @@ $active-nav-color: #1d8feb;
     border-color: #fff;
     margin-left: 5px
   }
-}
-
-.design-system-header__navigation-toggle:active::after {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent;
-    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    border-width: 0 5px 8.66px 5px;
-    border-bottom-color: inherit;
-    border-color: #fff;
-}
-
-
-
-.design-system-header__navigation-toggle-checkbox {
-  position: absolute;
-  left: -9999em;
-
-  @include media(tablet) {
-    display: none;
-  }
-}
-
-.design-system-header__navigation-toggle-checkbox:checked ~ .design-system-header__navigation-toggle:after {
-  content: "\25B2";
-}
-
-.design-system-header__navigation-toggle-checkbox:checked ~ .design-system-header__navigation {
-  display: block;
 }
