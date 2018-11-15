@@ -312,44 +312,6 @@
 .mobile-nav-trigger input.button.active {
   background-color: #005ea5; }
 
-.design-system-header__navigation-toggle {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding-left: 15px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  height: 35px;
-  background-color: #0b0c0c;
-  color: #fff;
-  border: 0px; }
-  @media (min-width: 768px) {
-    .design-system-header__navigation-toggle {
-      font-size: 19px;
-      line-height: 1.31579; } }
-  @media (min-width: 768px) {
-    .design-system-header__navigation-toggle {
-      display: none; } }
-  .design-system-header__navigation-toggle:after {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent;
-    -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
-    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
-    border-width: 8.66px 5px 0 5px;
-    border-top-color: inherit;
-    content: "";
-    border-color: #fff;
-    margin-left: 5px; }
-
 /**
  * Hero Component
  *
@@ -589,6 +551,44 @@
 
 .js-enabled .app-mobile-nav__subnav-toggler--active {
   border-top: 1px solid #fff; }
+
+.app-header-mobile-nav-toggler {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  height: 35px;
+  background-color: #0b0c0c;
+  color: #fff;
+  border: 0px; }
+  @media (min-width: 768px) {
+    .app-header-mobile-nav-toggler {
+      font-size: 19px;
+      line-height: 1.31579; } }
+  @media (min-width: 768px) {
+    .app-header-mobile-nav-toggler {
+      display: none; } }
+  .app-header-mobile-nav-toggler:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    border-width: 8.66px 5px 0 5px;
+    border-top-color: inherit;
+    content: "";
+    border-color: #fff;
+    margin-left: 5px; }
 
 .app-header-mobile-nav-toggler--active::after {
   display: inline-block;

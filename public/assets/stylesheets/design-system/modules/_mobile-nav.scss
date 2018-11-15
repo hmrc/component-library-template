@@ -116,6 +116,38 @@
   border-top: 1px solid $white;
 }
 
+.app-header-mobile-nav-toggler {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding-left: 15px;
+  @include box-sizing(border-box);
+  @include core-19;
+  height: 35px;
+  background-color: $black;
+  color: $white;
+  border: 0px;
+
+  @include media(tablet) {
+    display: none;
+  }
+
+  &:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    border-width: 8.66px 5px 0 5px;
+    border-top-color: inherit;
+    content: "";
+    border-color: #fff;
+    margin-left: 5px
+  }
+}
+
 .app-header-mobile-nav-toggler--active {
     &::after {
     display: inline-block;
