@@ -314,7 +314,7 @@
   background-color: #005ea5; }
 
 .notification-summary {
-  border: 4px solid #005ea5;
+  border: 4px solid #008670;
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 15px 10px; }
@@ -322,7 +322,7 @@
     max-width: 38em; }
   @media (min-width: 768px) {
     .notification-summary {
-      border: 5px solid #005ea5;
+      border: 5px solid #008670;
       margin-top: 30px;
       margin-bottom: 30px;
       padding: 20px 15px 15px; } }
