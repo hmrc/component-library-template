@@ -190,7 +190,7 @@ $active-nav-color: #1d8feb;
 
 // deprecation notice
 .notification-summary {
-  border: 4px solid $govuk-blue;
+  border: 4px solid $hm-revenue-customs-websafe;
   margin-top: $gutter-half;
   margin-bottom: $gutter-half;
   padding: $gutter-half 10px;
@@ -198,7 +198,7 @@ $active-nav-color: #1d8feb;
     max-width: 38em;
   }
   @include media(tablet) {
-    border: 5px solid $govuk-blue;
+    border: 5px solid $hm-revenue-customs-websafe;
     margin-top: $gutter;
     margin-bottom: $gutter;
     padding: $gutter-two-thirds $gutter-half $gutter-half;
